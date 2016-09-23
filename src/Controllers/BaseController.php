@@ -20,7 +20,12 @@ class BaseController
      * @var HttpCallBack
      */
     private $httpCallBack = null;
-
+	
+	public function __construct()
+	{
+		$this->httpCallBack = new HttpCallBack();
+	}
+	
     /**
      * Set HttpCallBack for this controller
      * @param HttpCallBack $httpCallBack Http Callbacks called before/after each API call
